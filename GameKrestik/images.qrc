@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/new/image">
+        <file>image/cross.png</file>
+        <file>image/zero.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>sound/click.mp3</file>
+    </qresource>
+</RCC>
