@@ -20,7 +20,7 @@
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QStatusBar>
-#include <QtWidgets/QTextBrowser>
+#include <QtWidgets/QTableWidget>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QWidget>
 
@@ -42,8 +42,8 @@ public:
     QPushButton *pushButton_7;
     QPushButton *pushButton_8;
     QPushButton *pushButton_9;
-    QTextBrowser *textBrowser;
     QLabel *label;
+    QTableWidget *tableWidget;
     QMenuBar *menuBar;
     QMenu *menuFile;
     QMenu *menuSettings;
@@ -54,7 +54,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(503, 339);
+        MainWindow->resize(526, 371);
         actionExit = new QAction(MainWindow);
         actionExit->setObjectName(QStringLiteral("actionExit"));
         actionNew_Game = new QAction(MainWindow);
@@ -90,16 +90,44 @@ public:
         pushButton_9 = new QPushButton(centralWidget);
         pushButton_9->setObjectName(QStringLiteral("pushButton_9"));
         pushButton_9->setGeometry(QRect(200, 190, 81, 61));
-        textBrowser = new QTextBrowser(centralWidget);
-        textBrowser->setObjectName(QStringLiteral("textBrowser"));
-        textBrowser->setGeometry(QRect(290, 10, 171, 241));
         label = new QLabel(centralWidget);
         label->setObjectName(QStringLiteral("label"));
         label->setGeometry(QRect(29, 20, 251, 16));
+        tableWidget = new QTableWidget(centralWidget);
+        if (tableWidget->columnCount() < 2)
+            tableWidget->setColumnCount(2);
+        QTableWidgetItem *__qtablewidgetitem = new QTableWidgetItem();
+        tableWidget->setHorizontalHeaderItem(0, __qtablewidgetitem);
+        QTableWidgetItem *__qtablewidgetitem1 = new QTableWidgetItem();
+        tableWidget->setHorizontalHeaderItem(1, __qtablewidgetitem1);
+        if (tableWidget->rowCount() < 10)
+            tableWidget->setRowCount(10);
+        QTableWidgetItem *__qtablewidgetitem2 = new QTableWidgetItem();
+        tableWidget->setVerticalHeaderItem(0, __qtablewidgetitem2);
+        QTableWidgetItem *__qtablewidgetitem3 = new QTableWidgetItem();
+        tableWidget->setVerticalHeaderItem(1, __qtablewidgetitem3);
+        QTableWidgetItem *__qtablewidgetitem4 = new QTableWidgetItem();
+        tableWidget->setVerticalHeaderItem(2, __qtablewidgetitem4);
+        QTableWidgetItem *__qtablewidgetitem5 = new QTableWidgetItem();
+        tableWidget->setVerticalHeaderItem(3, __qtablewidgetitem5);
+        QTableWidgetItem *__qtablewidgetitem6 = new QTableWidgetItem();
+        tableWidget->setVerticalHeaderItem(4, __qtablewidgetitem6);
+        QTableWidgetItem *__qtablewidgetitem7 = new QTableWidgetItem();
+        tableWidget->setVerticalHeaderItem(5, __qtablewidgetitem7);
+        QTableWidgetItem *__qtablewidgetitem8 = new QTableWidgetItem();
+        tableWidget->setVerticalHeaderItem(6, __qtablewidgetitem8);
+        QTableWidgetItem *__qtablewidgetitem9 = new QTableWidgetItem();
+        tableWidget->setVerticalHeaderItem(7, __qtablewidgetitem9);
+        QTableWidgetItem *__qtablewidgetitem10 = new QTableWidgetItem();
+        tableWidget->setVerticalHeaderItem(8, __qtablewidgetitem10);
+        QTableWidgetItem *__qtablewidgetitem11 = new QTableWidgetItem();
+        tableWidget->setVerticalHeaderItem(9, __qtablewidgetitem11);
+        tableWidget->setObjectName(QStringLiteral("tableWidget"));
+        tableWidget->setGeometry(QRect(290, 10, 221, 301));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 503, 21));
+        menuBar->setGeometry(QRect(0, 0, 526, 21));
         menuFile = new QMenu(menuBar);
         menuFile->setObjectName(QStringLiteral("menuFile"));
         menuSettings = new QMenu(menuBar);
@@ -139,6 +167,30 @@ public:
         pushButton_8->setText(QString());
         pushButton_9->setText(QString());
         label->setText(QString());
+        QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
+        ___qtablewidgetitem->setText(QApplication::translate("MainWindow", "Name", Q_NULLPTR));
+        QTableWidgetItem *___qtablewidgetitem1 = tableWidget->horizontalHeaderItem(1);
+        ___qtablewidgetitem1->setText(QApplication::translate("MainWindow", "Score", Q_NULLPTR));
+        QTableWidgetItem *___qtablewidgetitem2 = tableWidget->verticalHeaderItem(0);
+        ___qtablewidgetitem2->setText(QApplication::translate("MainWindow", "0", Q_NULLPTR));
+        QTableWidgetItem *___qtablewidgetitem3 = tableWidget->verticalHeaderItem(1);
+        ___qtablewidgetitem3->setText(QApplication::translate("MainWindow", "0", Q_NULLPTR));
+        QTableWidgetItem *___qtablewidgetitem4 = tableWidget->verticalHeaderItem(2);
+        ___qtablewidgetitem4->setText(QApplication::translate("MainWindow", "0", Q_NULLPTR));
+        QTableWidgetItem *___qtablewidgetitem5 = tableWidget->verticalHeaderItem(3);
+        ___qtablewidgetitem5->setText(QApplication::translate("MainWindow", "0", Q_NULLPTR));
+        QTableWidgetItem *___qtablewidgetitem6 = tableWidget->verticalHeaderItem(4);
+        ___qtablewidgetitem6->setText(QApplication::translate("MainWindow", "0", Q_NULLPTR));
+        QTableWidgetItem *___qtablewidgetitem7 = tableWidget->verticalHeaderItem(5);
+        ___qtablewidgetitem7->setText(QApplication::translate("MainWindow", "0", Q_NULLPTR));
+        QTableWidgetItem *___qtablewidgetitem8 = tableWidget->verticalHeaderItem(6);
+        ___qtablewidgetitem8->setText(QApplication::translate("MainWindow", "0", Q_NULLPTR));
+        QTableWidgetItem *___qtablewidgetitem9 = tableWidget->verticalHeaderItem(7);
+        ___qtablewidgetitem9->setText(QApplication::translate("MainWindow", "0", Q_NULLPTR));
+        QTableWidgetItem *___qtablewidgetitem10 = tableWidget->verticalHeaderItem(8);
+        ___qtablewidgetitem10->setText(QApplication::translate("MainWindow", "0", Q_NULLPTR));
+        QTableWidgetItem *___qtablewidgetitem11 = tableWidget->verticalHeaderItem(9);
+        ___qtablewidgetitem11->setText(QApplication::translate("MainWindow", "0", Q_NULLPTR));
         menuFile->setTitle(QApplication::translate("MainWindow", "File", Q_NULLPTR));
         menuSettings->setTitle(QApplication::translate("MainWindow", "Settings", Q_NULLPTR));
     } // retranslateUi

@@ -4,7 +4,6 @@
 #include <QMainWindow>
 #include <QPixmap>
 #include <QIcon>
-#include <QSound>
 #include <QMediaPlayer>
 #include <QMessageBox>
 
@@ -41,9 +40,11 @@ private:
     QPixmap *cross;
     QPixmap *zero;
     QIcon *icon;
-    QSound *sound;
     QMediaPlayer *player;
     QMessageBox mg;
+    QString results[10];
+    QString records_score[10];
+    QString records_name[10];
 
     int bt = -1;
     int bt2 = -1;
@@ -57,7 +58,8 @@ private:
 
     void onButtonClick();
     void checkVictory();
-    void writeResults();
+    void writeResults(int score_now, QString pl);
+    void readResults();
 };
 
 #endif // MAINWINDOW_H
